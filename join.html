@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>JOIN | Lattice</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
+<style>
+.step-roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+.roadmap-item {
+  background: #fdfcf9;
+  border: 1px solid rgba(20,34,61,0.12);
+  border-radius: 8px;
+  padding: 24px 16px;
+  position: relative;
+}
+.roadmap-item::after {
+  content: "→";
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #d95d39;
+  z-index: 2;
+}
+.roadmap-item:last-child::after { display: none; }
+@media (max-width:768px) {
+  .step-roadmap { grid-template-columns: 1fr; }
+  .roadmap-item::after { display: none; }
+}
+</style>
 </head>
 
 <body>
@@ -22,7 +47,6 @@
         <small>学生団体</small>
         Lattice
     </a>
-
     <nav>
         <a href="about.html">ABOUT</a>
         <a href="activity.html">ACTIVITY</a>
@@ -32,100 +56,56 @@
     </nav>
 </header>
 
-
 <main>
 
 <section class="join-hero">
-
     <div>
-
         <p class="label">JOIN LATTICE</p>
-
-        <h1>
-            「やってみたい」を<br>
-            「やってみる」へ。
-        </h1>
-
-        <p>
-            Latticeでは、一緒に活動する学生や<br>
-            コラボレーションしてくださる方を募集しています。
-        </p>
-
+        <h1>「やってみたい」を<br>「やってみる」へ。</h1>
+        <p>Latticeでは、一緒に活動する学生や<br>コラボレーションしてくださる方を募集しています。</p>
     </div>
-
-    <div class="join-circle">
-        JOIN
-    </div>
-
+    <div class="join-circle">JOIN</div>
 </section>
 
+<!-- ★ 加入までの3ステップ図解 ★ -->
+<section class="container" style="max-width:900px; margin: 40px auto; padding: 0 20px;">
+    <p class="label" style="text-align:center;">HOW TO JOIN</p>
+    <h2 style="font-family:'Shippori Mincho',serif; text-align:center; font-size:1.6rem; color:#14223d;">参加までのステップ</h2>
 
-<section class="join-content">
-
-    <p class="label">FOR STUDENTS</p>
-
-    <h2>
-        こんな人と<br>
-        出会いたい。
-    </h2>
-
-    <div class="join-list">
-
-        <div>
-            <span>01</span>
-            <p>新しいことに挑戦してみたい</p>
+    <div class="step-roadmap">
+        <div class="roadmap-item">
+            <span style="color:#d95d39; font-weight:800; font-size:0.8rem;">STEP 01</span>
+            <h3 style="font-size:1.1rem; color:#14223d; margin:6px 0;">フォームから送信</h3>
+            <p style="font-size:0.85rem; color:#666;">下記ボタンのGoogleフォームから簡単に連絡。</p>
         </div>
-
-        <div>
-            <span>02</span>
-            <p>自分のアイデアを形にしたい</p>
+        <div class="roadmap-item">
+            <span style="color:#d95d39; font-weight:800; font-size:0.8rem;">STEP 02</span>
+            <h3 style="font-size:1.1rem; color:#14223d; margin:6px 0;">カジュアルにお話</h3>
+            <p style="font-size:0.85rem; color:#666;">オンライン等でやりたいことや関心を共有。</p>
         </div>
-
-        <div>
-            <span>03</span>
-            <p>普段会わない人と出会いたい</p>
+        <div class="roadmap-item" style="border-color:#d95d39; background:#fffbf9;">
+            <span style="color:#d95d39; font-weight:800; font-size:0.8rem;">STEP 03</span>
+            <h3 style="font-size:1.1rem; color:#14223d; margin:6px 0;">メンバー参加！</h3>
+            <p style="font-size:0.85rem; color:#666;">イベントやプロジェクトに自由な関わり方でスタート。</p>
         </div>
-
-        <div>
-            <span>04</span>
-            <p>学生のうちに何かをつくりたい</p>
-        </div>
-
     </div>
-
 </section>
-
 
 <section class="contact-final">
-
     <p class="label">CONTACT</p>
-
-    <h2>
-        まずは、<br>
-        話してみる。
-    </h2>
-
-    <!-- ★ここを自分たちのフォームURLに変更 -->
-    <a
-        href="https://forms.google.com/"
-        target="_blank"
-        class="big-button white"
-    >
+    <h2>まずは、<br>話してみる。</h2>
+    <a href="https://forms.google.com/" target="_blank" class="big-button white">
         CONTACT FORM →
     </a>
-
 </section>
 
 </main>
-
 
 <footer>
     <p>© 学生団体 Lattice</p>
     <p>繋がるほど、自由に。</p>
 </footer>
 
-
 <script src="js/script.js"></script>
-
 </body>
 </html>
